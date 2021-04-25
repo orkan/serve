@@ -1,0 +1,34 @@
+{
+	"name" : "orkan/[new]",
+	"description" : "Eclipse/GIT project: REL",
+	"homepage" : "https://github.com/orkan/[new]",
+	"license": "GPL-3.0-or-later",
+	"authors" : [
+		{
+			"name" : "Orkan",
+			"role" : "Lead",
+			"email" : "orkans@gmail.com"
+		}
+	],
+	"require": {
+		"orkan/utils": "^1.6"
+	},
+	"require-dev": {
+		"orkan/utils": "^1.6"
+	},
+	"autoload" : {
+		"psr-4" : {
+			"Orkan\\{New}\\" : "src"
+		}
+	},
+	"autoload-dev" : {
+		"psr-4" : {
+			"Orkan\\{New}\\Tests\\" : "tests"
+		}
+	},
+	"extra" : {
+		"branch-alias" : {
+			"dev-master" : "0.1.x-dev"
+		}
+	}
+}
