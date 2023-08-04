@@ -1,0 +1,36 @@
+{
+  "name": "@orkans/serve",
+  "version": "1.0.0",
+  "description": "Serve local files through localhost.",
+  "keywords": [
+    "localhost",
+    "server"
+  ],
+  "license": "MIT",
+  "author": "Orkan <orkans+serve@gmail.com>",
+  "homepage": "https://github.com/orkan/serve#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orkan/serve.git"
+  },
+  "bugs": {
+    "url": "https://github.com/orkan/serve/issues"
+  },
+  "type": "module",
+  "main": "./src/index.mjs",
+  "bin": "./serve.mjs",
+  "scripts": {
+    "start": "serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "commander": "^11",
+    "express": "^4",
+    "serve-index": "^1",
+    "open": "^9",
+    "clipboardy": "^3",
+    "boxen": "^7",
+    "chalk": "^5"
+  },
+  "devDependencies": {}
+}

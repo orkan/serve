@@ -1,18 +1,31 @@
-# Eclipse/GIT project: REL
-Release repo (packagist.org)
+# Serve `v1.0.0`
+Simple local file server with options.
 
 ## Installation
-`$ composer require orkan/[new]`
+`$ npm i @orkans/serve`
 
-## Third Party Packages
-* [Monolog](https://github.com/Seldaek/monolog) for extended logging
+## Usage
+serve [options]
+```
+Options:
+  -V, --version         output the version number
+  -p, --port <number>   port number (default: 3000)
+  -d, --dir <path>      home dir (default: current working home)
+  -o, --open [browser]  open url in browser. Use 'cfg' to load settings from ./open.json file
+  -c, --clip            copy url to clipboard
+  --debug               output extra debugging
+  -h, --help            display help for command
+```
 
 ## About
 ### Requirements
-PHP  ^7.3
+Node ^20
 
 ### Author
 [Orkan](https://github.com/orkan)
 
 ### License
-GNU GPLv3
+MIT
+
+### Updated
+Fri, 04 Aug 2023 17:08:23 +02:00
