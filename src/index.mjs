@@ -28,11 +28,11 @@ export default () => {
     .version(pkg.version)
     .description(pkg.description)
     .addOption(new Option("-p, --port <number>", "port number").default(3000))
-    .addOption(new Option("-d, --dir <path>", "home dir").default(process.cwd(), "current working dir"))
-    .option("-c, --clip", "copy url to clipboard")
-    .option("-o, --open [browser]", "open url in browser. Use 'cfg' to load settings from ./open.json file")
-    .option("-f, --file [path]", "open path")
-    .option("--debug", "output extra debugging")
+    .addOption(new Option("-d, --dir <path>"   , "home dir"   ).default(process.cwd(), "current working dir"))
+    .option("-c, --clip"          , "copy url to clipboard")
+    .option("-o, --open [browser]", "open browser. Use 'cfg' to load settings from ./open.json file")
+    .option("-f, --file [path]"   , "open path in browser")
+    .option("--debug"             , "output extra debugging")
     .parse(process.argv);
 
   const opts = cli.opts();

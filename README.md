@@ -1,4 +1,4 @@
-# [Serve](https://www.npmjs.com/package/@orkans/serve) `v1.1.1`
+# [Serve](https://www.npmjs.com/package/@orkans/serve) `v1.1.2`
 Simple local file server with options.
 
 ## Installation
@@ -29,4 +29,4 @@ Node ^20
 MIT
 
 ### Updated
-Sun, 06 Aug 2023 17:08:08 +02:00
+Sun, 06 Aug 2023 17:51:30 +02:00

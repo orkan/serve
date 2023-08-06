@@ -7,22 +7,27 @@ import serveIndex from "serve-index";
 
 /**
  * Start Express server.
+ * @link http://expressjs.com
+ * 
  * @param home Home dir
  * @param port Port number
  */
 export default (home = process.cwd(), port = 3000) => {
-  // Create Express server
+  // Create
   const app = express();
 
-  // Lookup the files in 'home' directory
-  // The express.static serves the file contents
-  // The serveIndex is this module serving the directory
+  /**
+   * Add callbacks:
+   * - express.static() middleware: serves files
+   * - serveIndex() next-middleware: serves directory index
+   * @link http://expressjs.com/en/guide/writing-middleware.html#writing-middleware-for-use-in-express-apps
+   */
   app.use("/", express.static(home), serveIndex(home, { icons: true }));
 
   app.all("/*", (req, res) => {
     res.sendFile(req.url);
   });
 
-  // Start Express server
+  // Start
   app.listen(port);
 };
