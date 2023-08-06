@@ -1,4 +1,4 @@
-# Serve `v1.0.0`
+# Serve `v1.1.0`
 Simple local file server with options.
 
 ## Installation
@@ -28,4 +28,4 @@ Node ^20
 MIT
 
 ### Updated
-Fri, 04 Aug 2023 17:08:23 +02:00
+Sun, 06 Aug 2023 16:08:31 +02:00

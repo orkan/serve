@@ -10,7 +10,7 @@ import boxen from "boxen";
  */
 export default class {
   /**
-   * Log types and rendering order.
+   * Define record types and rendering order.
    */
   logs = { ext: [], err: [], inf: [] };
 

@@ -18,19 +18,20 @@ export default () => {
    * ==========================================================================
    * Init app
    */
+  const pkg = require("../package.json");
   const log = new Logger();
   const cli = new Command();
-  const app = require("../package.json");
 
   // prettier-ignore
   cli
     .name("serve")
-    .version(app.version)
-    .description(app.description)
+    .version(pkg.version)
+    .description(pkg.description)
     .addOption(new Option("-p, --port <number>", "port number").default(3000))
-    .addOption(new Option("-d, --dir <path>", "home dir").default(process.cwd(), "current working home"))
+    .addOption(new Option("-d, --dir <path>", "home dir").default(process.cwd(), "current working dir"))
     .option("-c, --clip", "copy url to clipboard")
     .option("-o, --open [browser]", "open url in browser. Use 'cfg' to load settings from ./open.json file")
+    .option("-f, --file [path]", "open path")
     .option("--debug", "output extra debugging")
     .parse(process.argv);
 
@@ -79,16 +80,15 @@ export default () => {
      * Open browser?
      */
     if (opts.open) {
-      let openArgs = {
+      let args = {
         app: { name: browsers[opts.open] ?? null },
+        url: opts.file ? `${url}/${opts.file}` : url,
       };
       if ("cfg" === opts.open) {
-        let openCfg = JSON.parse(fs.readFileSync("./open.json", "utf8"));
-        openArgs = { ...openArgs, ...openCfg };
+        args = { ...args, ...require(path.resolve("./open.json")) };
       }
-      opts.debug && console.log("openArgs", openArgs);
-
-      open(url, openArgs);
+      opts.debug && console.log("openArgs", args);
+      open(args.url, args);
       log.info("Opening browser...");
     }
 
