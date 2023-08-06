@@ -1,4 +1,4 @@
-# [Serve](https://www.npmjs.com/package/@orkans/serve) `v1.1.2`
+# [Serve](https://www.npmjs.com/package/@orkans/serve) `v1.1.3`
 Simple local file server with options.
 
 ## Installation
@@ -12,8 +12,8 @@ Options:
   -p, --port <number>   port number (default: 3000)
   -d, --dir <path>      home dir (default: current working dir)
   -c, --clip            copy url to clipboard
-  -o, --open [browser]  open url in browser. Use 'cfg' to load settings from ./open.json file
-  -f, --file [path]     open path
+  -o, --open [browser]  open browser. Use 'cfg' to load settings from ./open.json file
+  -f, --file [path]     open path in browser
   --debug               output extra debugging
   -h, --help            display help for command
 ```
@@ -29,4 +29,4 @@ Node ^20
 MIT
 
 ### Updated
-Sun, 06 Aug 2023 17:51:30 +02:00
+Sun, 06 Aug 2023 17:59:31 +02:00
