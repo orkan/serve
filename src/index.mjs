@@ -56,7 +56,8 @@ export default () => {
    * ==========================================================================
    * Start
    */
-  findPort(opts.port).then((port) => {
+  (async () => {
+    const port = await findPort(opts.port);
     runServer(home, port);
 
     const url = `http://localhost:${port}`;
@@ -97,5 +98,5 @@ export default () => {
      * Finalize...
      */
     log.render();
-  });
+  })();
 };
